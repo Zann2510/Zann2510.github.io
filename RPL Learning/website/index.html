@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RPL Learning</title>
+  <link rel="icon" href="/website/src/logo.jpg" type="/website/src/logo.png" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="scroll-smooth bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white shadow z-50 min-h-[80px]">
+    <div class="max-w-screen-xl mx-auto px-4 py-6 flex items-center justify-between">
+      <img src="/website/src/logo2.png" alt="Logo" class="h-12 w-auto">
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <nav id="menu" class="hidden md:flex space-x-8 text-lg">
+        <a href="#home" class="hover:text-yellow-600">Home</a>
+        <a href="#pelajaran" class="hover:text-yellow-600">Pelajaran</a>
+        <a href="#tentangkami" class="hover:text-yellow-600">Tentang Kami</a>
+      </nav>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu"
+      class="md:hidden max-h-0 overflow-hidden px-2 pb-2 transition-all duration-500 ease-in-out opacity-0">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#pelajaran" class="block py-2">Pelajaran</a>
+      <a href="#tentangkami" class="block py-2">Tentang Kami</a>
+    </div>
+  </header>
+
+<h1 class="text-3xl font-bold">RPL Learning</h1>
+      <!-- Home Section -->
+  <main class="pt-24 pb-12">
+    <div class="max-w-6xl mx-auto bg-white shadow rounded-2xl px-6 py-10">
+      <section id="home" class="scroll-mt-[150px] min-h-[60vh] relative bg-cover bg-center bg-no-repeat rounded-2xl text-white"
+         style="background-image: url('/website/src/bg.png');">
+  <div class="absolute bottom-8 left-8 max-w-xl fade-in bg-opacity-50 p-6 rounded-lg">
+        <h2 class="Helvetica neue text-4xl md:text-6xl font-bold mb-4 text-white">Welcome!</h2>
+        <p class="Helvetica neue text-4x1 md:text-lg font-bold text-white">Selamat datang di web yang  yang akan <br>
+         membawa mu ke masa depan yang lebih baik.</p>
+      </div>
+    </section>
+  </div>
+  </main>
+
+    <!-- Learning Section -->
+  <main class="pt-15 pb-10">
+  <div class="max-w-6xl mx-auto bg-white shadow rounded-2xl px-6 py-10">
+    <section id="pelajaran" class="scroll-mt-[150px] py-2 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Heading -->
+        <div class="flex justify-between items-center mb-8">
+          <h1 class="text-3xl font-bold">Pelajaran</h1>
+          <p class="italic text-gray-500 hidden md:block">Materi yang akan kamu pelajari di web ini</p>
+        </div>
+
+        <!-- Grid Card -->
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          
+          <!-- Card -->
+          <div class="rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition-all">
+            <img src="/website/src/html.png" alt="HTML" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-2">HTML</h3>
+              <p class="text-gray-600 text-sm">Struktur utama dari setiap halaman website.</p>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition-all">
+            <img src="/website/src/css.png" alt="CSS" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-2">CSS</h3>
+              <p class="text-gray-600 text-sm">Mengatur tampilan dan gaya dari elemen web.</p>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition-all">
+            <img src="/website/src/js.png" alt="JavaScript" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-2">JavaScript</h3>
+              <p class="text-gray-600 text-sm">Menambahkan interaktivitas ke dalam web.</p>
+            </div>
+          </div>
+
+          <!-- Tambahan lainnya -->
+          <div class="rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition-all">
+            <img src="/website/src/reactjs.png" alt="React JS" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-2">React JS</h3>
+              <p class="text-gray-600 text-sm">Library modern untuk membangun UI berbasis komponen.</p>
+            </div>
+          </div>
+
+          <div class="rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition-all">
+            <img src="/website/src/nodejs.png" alt="Node JS" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-2">Node JS</h3>
+              <p class="text-gray-600 text-sm">Menjalankan JavaScript di sisi server.</p>
+            </div>
+          </div>
+
+          <div class="rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition-all">
+            <img src="/website/src/mysql.png" alt="MySQL" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-2">MySQL</h3>
+              <p class="text-gray-600 text-sm">Menyimpan dan mengelola data berbasis relasional.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="mt-10 text-center">
+          <a href="#"
+             class="inline-flex items-center gap-2 border border-gray-800 px-6 py-3 rounded-full text-gray-800 hover:bg-gray-800 hover:text-white transition">
+            → Temukan Semua Materi
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+ 
+
+ <!-- Offer Section -->
+<main class="pt-15 pb-10">
+  <div class="max-w-6xl mx-auto bg-white shadow rounded-2xl px-6 py-10">
+    <section id="tentangkami" class="scroll-mt-[150px] py-2 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Grid konten -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          
+          <!-- Konten Teks -->
+          <div>
+            <h2 class="text-3xl font-bold mb-4 text-gray-900">
+              Siap Belajar & Bertumbuh Bersama?
+            </h2>
+            <p class="text-gray-700 text-base leading-relaxed mb-6">
+              Website edukasi ini dirancang untuk membimbing kamu memahami dunia pemrograman dengan cara yang mudah, interaktif, dan menyenangkan. Mulai dari HTML dasar hingga framework modern seperti React dan NodeJS, semua dikemas untuk membantu kamu menjadi web developer yang siap menghadapi masa depan digital.
+            </p>
+            <a href="#pelajaran"
+               class="inline-flex items-center gap-2 border border-gray-800 px-6 py-3 rounded-full text-gray-800 hover:bg-gray-800 hover:text-white transition">
+              → Mulai Belajar Sekarang
+            </a>
+          </div>
+
+          <!-- Gambar -->
+          <div class="flex justify-center">
+            <img src="/website/src/lanang_loro.png" alt="Siswa SMK" class="w-64 md:w-72 object-contain">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+
+
+  <!-- Scroll to top button -->
+  <button id="scrollTopBtn"
+    class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg hover:bg-blue-700 transition">
+    ↑
+  </button>
+
+ <!-- Footer -->
+<footer class="bg-gray-100 text-black py-10 mt-16">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-center md:text-left">
+      
+      <!-- Tentang Kami -->
+      <div class="flex: 1">
+        <h3 class="font-semibold text-lg mb-2">Tentang Kami</h3>
+        <p>
+          Web edukasi IT yang mengantarkan kamu<br> 
+          menuju depan pintu masa depan yang<br>
+          akan menjadikan mu lebih baik
+        </p>
+      </div>
+
+      <!-- Sosial Media -->
+      <div class="flex: 1 text align-center">
+        <h3 class="font-semibold text-lg mb-2">Sosial Media</h3>
+        <ul>
+          <li><a href="#" class="hover:underline">Facebook</a></li>
+          <li><a href="#" class="hover:underline">Instagram</a></li>
+          <li><a href="#" class="hover:underline">Twitter</a></li>
+          <li><a href="#" class="hover:underline">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontak -->
+      <div class="flex: 1 text left">
+        <h3 class="font-semibold text-lg mb-2">Kontak</h3>
+        <p>Email: <a href="mailto:zanndevictoria@gmail.com" class="hover:underline">zanndevictoria@gmail.com</a></p>
+        <p>Telepon: (+62)-895-1841-3799</p>
+        <p>Alamat: Jl. Danau Ranau No. 1, Sawojajar Malang</p>
+      </div>
+
+    </div>
+  </div>
+  <!-- Copyright -->
+    <div class="mt-8 text-center text-xs text-gray-800">
+      &copy; 2025 Mokleters. Fight Together Never Surennder.
+    </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="script.js">
+  </script>
+</body>
+</html>
